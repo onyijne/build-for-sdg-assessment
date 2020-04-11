@@ -1,16 +1,16 @@
 const impact = (data) => {
-  const { reportedCases, periodType, timeToElapse } = data;
-  const currentlyInfected = reportedCases * 10;
+  // const { reportedCases, periodType, timeToElapse } = data;
+  const currentlyInfected = data.reportedCases * 10;
   let elapse;
-  switch (periodType.toLowerCase()) {
+  switch (data.periodType.toLowerCase()) {
     case 'months':
-      elapse = Math.trunc(timeToElapse / 3) * 30;
+      elapse = Math.trunc(data.timeToElapse / 3) * 30;
       break;
     case 'weeks':
-      elapse = Math.trunc(timeToElapse / 3) * 7;
+      elapse = Math.trunc(data.timeToElapse / 3) * 7;
       break;
     default:
-      elapse = Math.trunc(timeToElapse / 3);
+      elapse = Math.trunc(data.timeToElapse / 3);
       break;
   }
   const infectionsByRequestedTime = currentlyInfected * (2 ** elapse);
