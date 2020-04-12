@@ -1,4 +1,4 @@
-const impact = ({ data }) => {
+const impact = (data) => {
   const { reportedCases, periodType, timeToElapse } = data;
   const currentlyInfected = reportedCases * 10;
   let elapse;

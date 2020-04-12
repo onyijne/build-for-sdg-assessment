@@ -15,9 +15,10 @@ import severeImpact from './severeImpact';
   totalHospitalBeds: 1380614
 }; */
 
-const covid19ImpactEstimator = (data) => data;
-
-covid19ImpactEstimator.impact = impact(covid19ImpactEstimator);
-covid19ImpactEstimator.severeImpact = severeImpact(covid19ImpactEstimator);
+const covid19ImpactEstimator = (data) => ({
+  data,
+  impact: impact(data),
+  severeImpact: severeImpact(data)
+});
 
 export default covid19ImpactEstimator;

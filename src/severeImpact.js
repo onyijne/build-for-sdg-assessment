@@ -1,4 +1,4 @@
-const severeImpact = ({ data }) => {
+const severeImpact = (data) => {
   const { reportedCases, periodType, timeToElapse } = data;
   const currentlyInfected = reportedCases * 50;
   let elapse;
