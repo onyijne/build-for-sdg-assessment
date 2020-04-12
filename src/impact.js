@@ -5,15 +5,15 @@ const impact = (data) => {
     reportedCases, periodType, timeToElapse, totalHospitalBeds, region
   } = data;
   const currentlyInfected = reportedCases * 10;
-  const elapse = periodNormalizer(periodType, timeToElapse);
-  const infectionsByRequestedTime = currentlyInfected * (2 ** elapse);
+  const normalizer = periodNormalizer(periodType, timeToElapse, region.avgDailyIncomeInUSD);
+  const infectionsByRequestedTime = currentlyInfected * (2 ** normalizer.elapseTime);
   const severeCasesByRequestedTime = Math.trunc((15 / 100) * infectionsByRequestedTime);
   const hospitalBedsByRequestedTime = Math.trunc(((35 / 100) * totalHospitalBeds)
   - severeCasesByRequestedTime);
   const casesForICUByRequestedTime = Math.trunc((5 / 100) * infectionsByRequestedTime);
   const casesForVentilatorsByRequestedTime = Math.trunc((2 / 100) * infectionsByRequestedTime);
   const dollarsInFlight = Math.trunc((infectionsByRequestedTime * region.avgDailyIncomePopulation)
-  * region.avgDailyIncomeInUSD * 30);
+  * normalizer.avgDailyIncome);
   return {
     currentlyInfected,
     infectionsByRequestedTime,
