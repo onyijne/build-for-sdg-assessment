@@ -17,7 +17,7 @@ const periodNormalizer = (periodType, timeToElapse, avgDailyIncomeInUSD) => {
   }
   return {
     elapseTime: Math.trunc(elapse),
-    avgDailyIncome: Math.trunc(amount)
+    avgDailyIncome: amount
   };
 };
 
