@@ -1,5 +1,3 @@
-import covid19ImpactEstimator from '../estimator';
-
 const divInstall = document.getElementById('installContainer');
 const butInstall = document.getElementById('butInstall');
 
@@ -72,7 +70,8 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelector('input[data-go-estimate]').addEventListener(
     'click', (e) => {
       e.preventDefault();
-      covid19ImpactEstimator(data);
+      // eslint-disable-next-line no-console
+      console.log(data);
     }
   );
 });

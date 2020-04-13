@@ -1,4 +1,5 @@
 body {
+    margin: 0em;
     background-color: #546E7A;
     color: white;
     font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -13,7 +14,7 @@ body {
   }
 
   img {
-    width: 10em;
+    width: 6em;
     margin: 1em auto;
   }
   
@@ -31,17 +32,18 @@ body {
 
   .form-wrap {
     width: 100%;
+    max-width: 26em;
   }
 
   .form {
     width: 92%;
-    max-width: 30em;
     margin: 0em auto;
   }
 
-  input, select {
-    margin: 0.8em;
-    width: 28em;
+  input,
+  select {
+    margin: 0.8em auto;
+    width: 100%;
   }
 
   input[type="button"] {
