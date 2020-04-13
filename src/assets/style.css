@@ -39,7 +39,7 @@ body {
     margin: 0em auto;
   }
 
-  input {
+  input, select {
     margin: 0.8em;
     width: 28em;
   }
