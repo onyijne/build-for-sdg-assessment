@@ -35,12 +35,13 @@ body {
 
   .form {
     width: 92%;
-    max-width: 40em;
+    max-width: 30em;
     margin: 0em auto;
   }
 
   input {
     margin: 0.8em;
+    width: 28em;
   }
 
   input[type="button"] {
