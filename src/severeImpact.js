@@ -13,7 +13,7 @@ const severeImpact = (data) => {
   const casesForICUByRequestedTime = Math.trunc((5 / 100) * infectionsByRequestedTime);
   const casesForVentilatorsByRequestedTime = Math.trunc((2 / 100) * infectionsByRequestedTime);
   const dollarsInFlight = Math.trunc((infectionsByRequestedTime * region.avgDailyIncomeInUSD
-  * region.avgDailyIncomePopulation) / normalizer.dollarElapseTime);
+  * region.avgDailyIncomePopulation) / timeToElapse);
   return {
     currentlyInfected,
     infectionsByRequestedTime,
