@@ -6,7 +6,7 @@
   <form action="#" method="POST" class="form">
     <div>
       <label for="population" aria-label="population">population</label>
-      <input id="population" name="population" data-population>
+      <input id="population"  name="population" data-population>
     </div>
     <div>
       <label for="time-to-elapse" aria-label="Time to Elapse">Time to Elapse</label>
