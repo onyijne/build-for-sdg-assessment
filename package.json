@@ -8,7 +8,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "eslint ./src/",
-    "start": "node main.js"
+    "start": "node ./src/main.js"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
